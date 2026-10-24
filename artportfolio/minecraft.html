@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Minecraft Art</title>
+    <!-- Bootstrap 5 CSS via CDN -->
+    <link href="https://jsdelivr.net" rel="stylesheet">
+</head>
+<body class="bg-light text-dark">
+
+    <!-- Universal Responsive Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">A.W.W Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="glitch.html">Glitch</a></li>
+                    <li class="nav-item"><a class="nav-link" href="mashup.html">Meme Mashup</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="minecraft.html">Minecraft</a></li>
+                    <li class="nav-item"><a class="nav-link" href="three-d.html">3D</a></li>
+                    <li class="nav-item"><a class="nav-link" href="netart.html">net art</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Responsive Desktop / Stacking Mobile Grid System -->
+    <div class="container my-5 p-4 bg-white rounded shadow-sm">
+        <div class="row align-items-center">
+            
+            <!-- Left Side Column: Artist Statement Box -->
+            <div class="col-lg-5 col-md-12 mb-4 mb-lg-0">
+                <h1 class="display-4 fw-bold">Minecraft Art</h1>
+                <hr class="my-4">
+                <h3>Artist Statement</h3>
+                <p class="lead text-muted">
+                   For my Minecraft art I chose to make Hello Kitty because she is a cultural icon.
+                </p>
+            </div>
+            
+            <!-- Right Side Column: Wide Responsive Image Container -->
+            <div class="col-lg-7 col-md-12 text-center">
+                <img src="kitty.jpeg" alt="Minecraft artwork layout" class="img-fluid w-100 rounded-3 shadow border p-1" style="max-height: 65vh; object-fit: cover;">
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Required Bootstrap 5 JavaScript Bundle via CDN -->
+    <script src="https://jsdelivr.net"></script>
+</body>
+</html>

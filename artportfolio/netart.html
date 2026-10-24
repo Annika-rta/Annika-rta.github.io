@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Net Art Documentation</title>
+    <!-- Corrected Bootstrap 5 CSS link path -->
+    <link href="https://jsdelivr.net" rel="stylesheet">
+</head>
+<body class="bg-light text-dark">
+
+    <!-- Universal Responsive Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">A.W.W Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="glitch.html">Glitch</a></li>
+                    <li class="nav-item"><a class="nav-link" href="mashup.html">Meme Mashup</a></li>
+                    <li class="nav-item"><a class="nav-link" href="minecraft.html">Minecraft</a></li>
+                    <li class="nav-item"><a class="nav-link" href="three-d.html">3D</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="netart.html">net art</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Responsive Desktop / Stacking Mobile Grid System -->
+    <div class="container my-5 p-4 bg-white rounded shadow-sm">
+        <div class="row align-items-center">
+            
+            <!-- Left Side Column: Artist Statement & Gateway Launcher -->
+            <div class="col-lg-5 col-md-12 mb-4 mb-lg-0">
+                <h1 class="display-4 fw-bold">net art Project</h1>
+                <p class="text-danger fw-bold">Interactive Narrative Hub</p>
+                <hr class="my-4">
+                <h3>Artist Statement</h3>
+                <p class="lead text-muted mb-4">
+                   At some point or another all cat owners find themselves saying “I wish I could live like my cat.” Well now you can too, but as my cat instead.
+                </p>
+                
+                <!-- REQUIRED GATEWAY LINK BUTTON -->
+                <a href="https://annika-rta.github.io/netart/index.html" class="btn btn-dark btn-lg shadow-sm px-4" target="_blank">Launch Live Net Art Piece </a>
+            </div>
+            
+            <!-- Right Side Column: Wide Responsive Clickable Image Container -->
+            <div class="col-lg-7 col-md-12 text-center">
+                <!-- Clicking Milo's image opens your game seamlessly at your game directory URL -->
+                <a href="https://annika-rta.github.io/netart/index.html" target="_blank">
+                    <img src="milo.jpeg" alt="Click to launch cat adventure game" class="img-fluid w-100 rounded-3 shadow border p-1" style="max-height: 65vh; object-fit: cover;">
+                </a>
+                <div class="small text-muted mt-2">Click the image above to load my text game.</div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Corrected Bootstrap 5 JavaScript Bundle link path -->
+    <script src="https://jsdelivr.net"></script>
+</body>
+</html>
