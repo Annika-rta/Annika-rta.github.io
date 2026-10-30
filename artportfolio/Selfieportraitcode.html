@@ -49,6 +49,168 @@
                 </a>
                
             </div>
+<p> Here is the code I used to create this below <p>
+
+</div>
+
+function setup() {
+  // Creating a 600x600 canvas as requested
+  createCanvas(600, 600);
+}
+
+function draw() {
+  // 1. GLOWING BURGUNDY TO BLACK GRADIENT BACKGROUND
+  for (let r = 900; r > 0; r -= 4) {
+    let inter = map(r, 0, 900, 0, 1); 
+    let c = lerpColor(color(115, 10, 35), color(10, 5, 8), inter); 
+    fill(c);
+    noStroke();
+    ellipse(300, 300, r, r); 
+  }
+  
+  // 2. Massive Back Curly Hair Volume
+  fill(45, 28, 12); 
+  noStroke();
+  ellipse(300, 240, 360, 360);
+  ellipse(200, 260, 200, 280);
+  ellipse(400, 260, 200, 280);
+  ellipse(200, 380, 160, 240);
+  ellipse(400, 380, 160, 240);
+
+  // 3. Neck & Shoulders
+  fill(235, 185, 155); 
+  rect(260, 320, 80, 100); // Neck box
+  
+  // Curved Torso Base
+  fill(30); 
+  ellipse(300, 500, 340, 200);
+  rect(130, 440, 340, 160);
+
+  // 4. ADDED ARMS (Bold structural sleeves framing the torso)
+  fill(25); // Slightly darker charcoal shadow tone for arm depth
+  noStroke();
+  rect(95, 450, 40, 150, 10);  // Left arm falling downward
+  rect(465, 450, 40, 150, 10); // Right arm falling downward
+
+  // 5. Precise Face Shape
+  fill(235, 185, 155);
+  ellipse(300, 240, 170, 220); 
+
+  // 6. Voluminous Curly Canopy Bangs 
+  fill(45, 28, 12);
+  ellipse(300, 145, 220, 80);
+  ellipse(240, 170, 100, 70);
+  ellipse(400, 170, 100, 70);
+  ellipse(300, 180, 120, 65);
+  // Curly edge textures
+  ellipse(220, 190, 40, 40);
+  ellipse(250, 195, 45, 45);
+  ellipse(280, 200, 50, 50);
+  ellipse(320, 200, 50, 50);
+  ellipse(350, 195, 45, 45);
+  ellipse(380, 190, 40, 40);
+
+  // 7. Straight Eyebrows
+  stroke(50, 30, 15); 
+  strokeWeight(4);
+  strokeCap(ROUND);
+  noFill();
+  line(238, 222, 266, 222); 
+  line(334, 222, 362, 222); 
+
+  // 8. Geometric Nose Lines
+  stroke(215, 160, 130); 
+  strokeWeight(3);
+  noFill();
+  line(296, 240, 296, 272); 
+  line(292, 272, 308, 272); 
+
+  // 9. Subtle Freckles
+  noStroke();
+  fill(120, 80, 50, 130); 
+  ellipse(250, 265, 2, 2);
+  ellipse(245, 272, 1.5, 2);
+  ellipse(258, 275, 2, 1.5);
+  ellipse(265, 268, 2, 2);
+  ellipse(280, 274, 2, 2);
+  ellipse(290, 276, 1.5, 1.5);
+  ellipse(300, 278, 2, 2);
+  ellipse(310, 275, 1.5, 1.5);
+  ellipse(322, 271, 2, 2);
+  ellipse(335, 266, 2, 2);
+  ellipse(342, 270, 1.5, 2);
+  ellipse(350, 275, 2, 1.5);
+
+  // 10. Left Eye & Red Graphic Eyeliner
+  stroke(160, 30, 40); 
+  strokeWeight(2.5);
+  noFill();
+  line(240, 238, 222, 230); 
+  line(222, 230, 235, 244);
+  line(240, 242, 220, 242);
+  
+  noStroke();
+  fill(255);
+  ellipse(255, 240, 24, 14);
+  fill(40, 25, 15); 
+  ellipse(256, 240, 12, 12);
+  fill(255);
+  ellipse(254, 238, 3, 3); 
+
+  // 11. Right Eye & Red Graphic Eyeliner
+  stroke(160, 30, 40);
+  strokeWeight(2.5);
+  noFill();
+  line(360, 238, 378, 230);
+  line(378, 230, 365, 244);
+  line(360, 242, 380, 242);
+  
+  noStroke();
+  fill(255);
+  ellipse(345, 240, 24, 14);
+  fill(40, 25, 15);
+  ellipse(344, 240, 12, 12);
+  fill(255);
+  ellipse(342, 238, 3, 3);
+
+  // 12. Lips with Dark Center Stripe Accent
+  noStroke();
+  fill(150, 40, 55); 
+  arc(300, 305, 36, 18, 0, PI); 
+  ellipse(291, 298, 20, 12); 
+  ellipse(309, 298, 20, 12); 
+  
+  stroke(20); 
+  strokeWeight(2);
+  line(300, 292, 300, 314);
+
+  // 13. Tattoo Choker Necklace
+  stroke(15);
+  strokeWeight(3);
+  noFill();
+  beginShape(LINES);
+  for(let x = 262; x <= 334; x += 6) {
+    vertex(x, 355);
+    vertex(x + 3, 362);
+    vertex(x + 3, 362);
+    vertex(x + 6, 355);
+  }
+  endShape();
+
+  // 14. Green Cord & Rounded Jade Stone Pendant
+  stroke(34, 110, 64); 
+  strokeWeight(2);
+  line(283, 420, 300, 450);
+  line(317, 420, 300, 450);
+  
+  noStroke();
+  fill(60, 140, 95); 
+  ellipse(300, 454, 32, 32); 
+  fill(30); 
+  ellipse(300, 454, 10, 10);
+
+  noLoop();
+}
 
         </div>
     </div>
