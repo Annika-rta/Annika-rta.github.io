@@ -53,8 +53,8 @@
 
 </div>
 
+<pre style="background-color: transparent; color: #333; padding: 10px 0; font-family: monospace; text-align: left; line-height: 1.5; white-space: pre; overflow-x: auto;">
 function setup() {
-  // Creating a 600x600 canvas as requested
   createCanvas(600, 600);
 }
 
@@ -77,32 +77,31 @@ function draw() {
   ellipse(200, 380, 160, 240);
   ellipse(400, 380, 160, 240);
 
-  // 3. Neck & Shoulders
+  // 3. Neck
   fill(235, 185, 155); 
-  rect(260, 320, 80, 100); // Neck box
+  rect(260, 320, 80, 100); 
+
+  // 4. ARMS LAYER
+  fill(30); 
+  noStroke();
+  rect(130, 450, 45, 150, 15);  
+  rect(425, 450, 45, 150, 15);  
   
-  // Curved Torso Base
+  // 5. CLOTHING TORSO
   fill(30); 
   ellipse(300, 500, 340, 200);
   rect(130, 440, 340, 160);
 
-  // 4. ADDED ARMS (Bold structural sleeves framing the torso)
-  fill(25); // Slightly darker charcoal shadow tone for arm depth
-  noStroke();
-  rect(95, 450, 40, 150, 10);  // Left arm falling downward
-  rect(465, 450, 40, 150, 10); // Right arm falling downward
-
-  // 5. Precise Face Shape
+  // 6. Precise Face Shape
   fill(235, 185, 155);
   ellipse(300, 240, 170, 220); 
 
-  // 6. Voluminous Curly Canopy Bangs 
+  // 7. Voluminous Curly Canopy Bangs 
   fill(45, 28, 12);
   ellipse(300, 145, 220, 80);
   ellipse(240, 170, 100, 70);
   ellipse(400, 170, 100, 70);
   ellipse(300, 180, 120, 65);
-  // Curly edge textures
   ellipse(220, 190, 40, 40);
   ellipse(250, 195, 45, 45);
   ellipse(280, 200, 50, 50);
@@ -110,7 +109,7 @@ function draw() {
   ellipse(350, 195, 45, 45);
   ellipse(380, 190, 40, 40);
 
-  // 7. Straight Eyebrows
+  // 8. Straight Eyebrows
   stroke(50, 30, 15); 
   strokeWeight(4);
   strokeCap(ROUND);
@@ -118,14 +117,14 @@ function draw() {
   line(238, 222, 266, 222); 
   line(334, 222, 362, 222); 
 
-  // 8. Geometric Nose Lines
+  // 9. Geometric Nose Lines
   stroke(215, 160, 130); 
   strokeWeight(3);
   noFill();
   line(296, 240, 296, 272); 
   line(292, 272, 308, 272); 
 
-  // 9. Subtle Freckles
+  // 10. Subtle Freckles
   noStroke();
   fill(120, 80, 50, 130); 
   ellipse(250, 265, 2, 2);
@@ -141,14 +140,13 @@ function draw() {
   ellipse(342, 270, 1.5, 2);
   ellipse(350, 275, 2, 1.5);
 
-  // 10. Left Eye & Red Graphic Eyeliner
+  // 11. Left Eye & Red Graphic Eyeliner
   stroke(160, 30, 40); 
   strokeWeight(2.5);
   noFill();
   line(240, 238, 222, 230); 
   line(222, 230, 235, 244);
   line(240, 242, 220, 242);
-  
   noStroke();
   fill(255);
   ellipse(255, 240, 24, 14);
@@ -157,14 +155,13 @@ function draw() {
   fill(255);
   ellipse(254, 238, 3, 3); 
 
-  // 11. Right Eye & Red Graphic Eyeliner
+  // 12. Right Eye & Red Graphic Eyeliner
   stroke(160, 30, 40);
   strokeWeight(2.5);
   noFill();
   line(360, 238, 378, 230);
   line(378, 230, 365, 244);
   line(360, 242, 380, 242);
-  
   noStroke();
   fill(255);
   ellipse(345, 240, 24, 14);
@@ -173,18 +170,17 @@ function draw() {
   fill(255);
   ellipse(342, 238, 3, 3);
 
-  // 12. Lips with Dark Center Stripe Accent
+  // 13. Lips with Dark Center Stripe Accent
   noStroke();
   fill(150, 40, 55); 
   arc(300, 305, 36, 18, 0, PI); 
   ellipse(291, 298, 20, 12); 
   ellipse(309, 298, 20, 12); 
-  
   stroke(20); 
   strokeWeight(2);
   line(300, 292, 300, 314);
 
-  // 13. Tattoo Choker Necklace
+  // 14. Tattoo Choker Necklace
   stroke(15);
   strokeWeight(3);
   noFill();
@@ -197,12 +193,11 @@ function draw() {
   }
   endShape();
 
-  // 14. Green Cord & Rounded Jade Stone Pendant
+  // 15. Green Cord & Rounded Jade Stone Pendant
   stroke(34, 110, 64); 
   strokeWeight(2);
   line(283, 420, 300, 450);
   line(317, 420, 300, 450);
-  
   noStroke();
   fill(60, 140, 95); 
   ellipse(300, 454, 32, 32); 
@@ -211,8 +206,10 @@ function draw() {
 
   noLoop();
 }
+</pre>
 
-        </div>
+
+       </div>
     </div>
 
     <!-- Corrected Bootstrap 5 JavaScript Bundle link path -->
