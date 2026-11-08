@@ -9,7 +9,7 @@
 </head>
 <body>
     <!-- Universal Responsive Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+    <nav class="navbar navbar-expand-xl navbar-dark bg-dark shadow-sm">
         <div class="container">
             <a class="navbar-brand" href="index.html">A.W.W Portfolio</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -18,14 +18,14 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="glitch.html">Glitch</a></li>
                     <li class="nav-item"><a class="nav-link" href="mashup.html">Meme Mashup</a></li>
                     <li class="nav-item"><a class="nav-link" href="minecraft.html">Minecraft</a></li>
                     <li class="nav-item"><a class="nav-link" href="three-d.html">3D</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="netart.html">net art</a></li>
- <li class="nav-item"><a class="nav-link active" href="diyps2026.html"> Diy photoshop art</a></li>
-<li class="nav-item"><a class="nav-link active" href="diyps2026.html">Do it yourself photoshop</a></li>
+                    <li class="nav-item"><a class="nav-link" href="netart.html">net art</a></li>
+               <li class="nav-item"><a class="nav-link active" href="selfieportraitcode.html">portrait code art</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="diyps2026.html"> Diy photoshop art</a></li>
                 </ul>
             </div>
         </div>
@@ -48,22 +48,56 @@
                 <h4 class="fw-bold text-secondary mb-3">Interactive Studio Canvas</h4>
                 <div style="width: 100%; max-width: 600px; height: 600px; border: 2px solid #ddd; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); overflow: hidden; background-color: #f8f9fa;">
                     <iframe src="https://annika-rta.github.io/diyps2026/" style="width: 100%; height: 100%; border: none;" scrolling="no"></iframe>
+
                 </div>
-                <p class="text-muted small text-center mt-2">Click inside the workspace window above and press keys <strong>1-9</strong> to switch brushes, <strong>G</strong> or <strong>L</strong> for stamps.</p>
             </div>
 
         </div>
     </div> 
                
             </div>
-<p> Here is the code I used to create this below <p>
+<p> Here is the code I used to create this below and an example of the batik designs you could create. <p>
 
-</div>
+                <img src="batikfabric.jpeg" alt="Artist Example" class="img-fluid w-100 rounded-3 shadow border p-1" style="max-height: 65vh; object-fit: cover;">
+            </div>
 
 <pre style="background-color: transparent; color: #333; padding: 10px 0; font-family: monospace; text-align: left; line-height: 1.5; white-space: pre; overflow-x: auto;">
 
+
+</p>There are 10 brushes total, which are activated by pressing the number keys along with other functions to explore.
+
+1 - Blend with translucent pink
+
+2 - rainbow dye brush
+
+3 - deep background color indigo 
+
+4 - smaller indigo brush
+
+5 - small gold brush
+
+6 - small crimson red brush 
+
+7 - red & gold flower stamp
+
+8 - Gold diamond stamp
+
+9 - background pink micro dots
+
+0 - white crackle effect for fabric finish
+
+G - Hello kitty stamp
+
+L - Lumpia Bulbasaur stamp
+
+E - Erase
+
+x - reset
+
+p - to save as a screenshot of your finished piece.</p>
+<br>
 var img;
-var img2; //  lumpia pokemon
+var img2; // lumpia pokemon
 var initials ='aww'; // initials
 var choice = '1'; // starting choice, so it is not empty
 var screenbg = 250; // off white background
@@ -89,9 +123,7 @@ function draw() {
   }
 }
 
-function batikbrushes(toolChoice) { //toolchoice is the key that was pressed
-  // The key mapping if statements that you can change to do anything you want.
-  // Just make sure each key option has a stroke or fill and then what type of graphic function
+function batikbrushes(toolChoice) { //brushes
 
   if (toolChoice == '1' ) {  // Tool 1:(Base fabric)
     stroke(240, 90, 140, 12); // Translucent pink
