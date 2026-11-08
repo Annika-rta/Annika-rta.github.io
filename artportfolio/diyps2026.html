@@ -1,0 +1,203 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+<title>Portfolio - Home</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <!-- Universal Responsive Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">A.W.W Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="glitch.html">Glitch</a></li>
+                    <li class="nav-item"><a class="nav-link" href="mashup.html">Meme Mashup</a></li>
+                    <li class="nav-item"><a class="nav-link" href="minecraft.html">Minecraft</a></li>
+                    <li class="nav-item"><a class="nav-link" href="three-d.html">3D</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="netart.html">net art</a></li>
+ <li class="nav-item"><a class="nav-link active" href="diyps2026.html"> Diy photoshop art</a></li>
+<li class="nav-item"><a class="nav-link active" href="diyps2026.html">Do it yourself photoshop</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Responsive Desktop / Stacking Mobile Grid System -->
+    <div class="container my-5 p-4 bg-white rounded shadow-sm">
+        <div class="row align-items-center">
+            
+            <!-- Left Side Column: Artist Statement & Gateway Launcher -->
+            <div class="col-lg-5 col-md-12 mb-4 mb-lg-0">
+                <h1 class="display-4 fw-bold">Diy Photoshop project</h1>
+                <hr class="my-4">
+       <h3>Artist Statement</h3>
+                <p class="lead text-muted mb-4">Here is a diy photoshop made to created batik fabric pattern</p>     
+            </div> <!-- Left Side Column Closes Safely Here -->
+               
+            <!-- Right Side Column: Holds the Interactive Studio Canvas Window -->
+            <div class="col-lg-7 col-md-12 d-flex flex-column align-items-center justify-content-center">
+                <h4 class="fw-bold text-secondary mb-3">Interactive Studio Canvas</h4>
+                <div style="width: 100%; max-width: 600px; height: 600px; border: 2px solid #ddd; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); overflow: hidden; background-color: #f8f9fa;">
+                    <iframe src="https://annika-rta.github.io/diyps2026/" style="width: 100%; height: 100%; border: none;" scrolling="no"></iframe>
+                </div>
+                <p class="text-muted small text-center mt-2">Click inside the workspace window above and press keys <strong>1-9</strong> to switch brushes, <strong>G</strong> or <strong>L</strong> for stamps.</p>
+            </div>
+
+        </div>
+    </div> 
+               
+            </div>
+<p> Here is the code I used to create this below <p>
+
+</div>
+
+<pre style="background-color: transparent; color: #333; padding: 10px 0; font-family: monospace; text-align: left; line-height: 1.5; white-space: pre; overflow-x: auto;">
+
+var img;
+var img2; //  lumpia pokemon
+var initials ='aww'; // initials
+var choice = '1'; // starting choice, so it is not empty
+var screenbg = 250; // off white background
+var lastscreenshot=61; // last screenshot never taken
+
+function preload() {
+  img = loadImage('cat.jpeg');
+  img2 = loadImage('lumpia.jpeg');
+}
+
+function setup() {
+  createCanvas(600, 600);  // canvas size
+  background(screenbg);  // background screen color
+}
+
+function draw() {
+  if (keyIsPressed) {
+    choice = key; 
+    clear_print(); 
+  }
+  if (mouseIsPressed){
+    batikbrushes(choice); // if the mouse is pressed call batikbrushes
+  }
+}
+
+function batikbrushes(toolChoice) { //toolchoice is the key that was pressed
+  // The key mapping if statements that you can change to do anything you want.
+  // Just make sure each key option has a stroke or fill and then what type of graphic function
+
+  if (toolChoice == '1' ) {  // Tool 1:(Base fabric)
+    stroke(240, 90, 140, 12); // Translucent pink
+    strokeWeight(60);
+    line(mouseX, mouseY, pmouseX, pmouseY);
+    ellipse(mouseX + random(-8, 8), mouseY + random(-8, 8), 30, 30);
+    
+  } else if (toolChoice == '2') { // Tool 2: Rainbow Dye 
+    colorMode(HSB, 360, 100, 100, 100);
+    let huevalue = (frameCount * 4) % 45; // rainbow of pinks, reds, and golds
+    if (huevalue < 15) huevalue += 335; 
+    stroke(huevalue, 80, 95, 15); // Translucent blending dye
+    strokeWeight(70);
+    line(mouseX, mouseY, pmouseX, pmouseY);
+    colorMode(RGB, 255, 255, 255, 255); // Safety reset for other tools
+    
+  } else if (toolChoice == '3') { // Tool 3: Massive Deep Contrast Indigo (Negative spaces)
+    stroke(30, 20, 40); // Deep background color
+    strokeWeight(45);
+    line(mouseX, mouseY, pmouseX, pmouseY);
+    
+  } else if (toolChoice == '4') { // Tool 4: Sharp Indigo Resist Outline (Main borders & leaves)
+    stroke(30, 20, 40);
+    strokeWeight(4);
+    line(mouseX, mouseY, pmouseX, pmouseY);
+    
+  } else if (toolChoice == '5') { // Tool 5: Radiant Gold Line (Flora detailing)
+    stroke(220, 160, 60); // Traditional batik gold
+    strokeWeight(2.5);
+    line(mouseX, mouseY, pmouseX, pmouseY);
+    
+  } else if (toolChoice == '6') { // Tool 6: Fine Crimson Red Shading Line
+    stroke(180, 15, 50); // Rich red dye line
+    strokeWeight(1.5);
+    line(mouseX, mouseY, pmouseX, pmouseY);
+    
+  } else if (toolChoice == '7') { // Tool 7: Red & Gold flower Stamp (Click to place flowers)
+    noStroke();
+    fill(180, 15, 50); // Crimson petals
+    for(let i = 0; i < 5; i++) {
+      push(); translate(mouseX, mouseY); rotate(TWO_PI / 5 * i);
+      ellipse(10, 0, 14, 9); pop();
+    }
+    fill(220, 160, 60); // Gold core
+    ellipse(mouseX, mouseY, 6, 6);
+    
+  } else if (toolChoice == '8') { // Tool 8: Golden Wax Border Stamps (Diamonds)
+    rectMode(CENTER);
+    fill(220, 160, 60);
+    stroke(250, 245, 235); // Fine white accent outline
+    strokeWeight(1);
+    push();
+    translate(mouseX, mouseY);
+    rotate(QUARTER_PI); // Rotates square into an ornamental diamond
+    rect(0, 0, 12, 12);
+    pop();
+    
+  } else if (toolChoice == '9') { // Tool 9: Tiny Wax-Droplet Cluster Background
+    fill(240, 90, 140); // Pink micro dots
+    noStroke();
+    for (let i = 0; i < 4; i++) {
+      ellipse(mouseX + random(-12, 12), mouseY + random(-12, 12), 3, 3);
+    }
+    
+  } else if (toolChoice == '0') { // Tool 0: Crackle Wax Resist Finish (Draw over art for old-world cracks)
+    stroke(250, 245, 235, 140); // Semi-transparent cloth fracture lines
+    strokeWeight(random(0.5, 2));
+    line(mouseX, mouseY, mouseX + random(-30, 30), mouseY + random(-30, 30));
+    
+  } else if (toolChoice == 'e' || toolChoice == 'E') { // Tool E: Background Color Eraser
+    stroke(screenbg); // Seamlessly matches your background screen canvas setting
+    strokeWeight(40); // Generous weight to clean mistakes easily
+    line(mouseX, mouseY, pmouseX, pmouseY);
+
+  } else if (toolChoice == 'g' || toolChoice == 'G') { // Tool G: Centered Hello Kitty Stamp
+    imageMode(CENTER);                                  
+    image(img, mouseX, mouseY, 40, 50); // Proportional scale adjustments applied                
+    imageMode(CORNER);                                  
+
+  } else if (toolChoice == 'l' || toolChoice == 'L') { // Tool L: Centered Lumpia Stamp
+    imageMode(CENTER);
+    image(img2, mouseX, mouseY, 50, 50); // Uniform aspect footprint
+    imageMode(CORNER);
+  }
+}
+ 
+function testbox(r, g, b) {
+  x = mouseX;
+  y = mouseY;
+  fill(r, g, b);
+  rect(x-50, y-50, 100, 100);
+}
+
+function clear_print() {
+  if (key == 'x' || key == 'X') {
+    background(screenbg); // set the screen back to the background color
+  } else if (key == 'p' || key == 'P') {
+     saveme();  // call saveme which saves an image of the screen
+  }
+}
+
+function saveme(){
+  filename=initials+day() + hour() + minute() +second();
+  if (second()!=lastscreenshot) { 
+    saveCanvas(filename, 'jpg');
+    key="";
+  }
+  lastscreenshot=second(); 
+}
